@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-for i in range(10):
-    for j in range(10):
-        if i == 9 and j == 9:
-            break
-        else:
-            print("{}{}".format(i, j), end=", ")
-print("{}{}".format(i, j))
+for i in range(100):
+    if i == 99:
+        break
+    print("{}{}".format(i // 10, i % 10), end=", ")
+print("{}{}".format(i // 10, i % 10))
