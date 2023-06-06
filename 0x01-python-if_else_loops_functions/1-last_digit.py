@@ -7,7 +7,7 @@ if number < 0:
     number = -1 * number
 else:
     last = number % 10
-st1 = "and is zero"
+st1 = "and is 0"
 st2 = "and is greater than 5"
 st3 = "and is less than 6 and not 0"
 if last == 0:
