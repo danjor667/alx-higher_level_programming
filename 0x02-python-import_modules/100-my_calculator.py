@@ -18,7 +18,7 @@ def operation(*args):
             print("{} * {} = {}".format(arg[0], arg[2], mul(arg[0], arg[2])))
             exit(0)
         elif args[1] == "/":
-            print("{} / {} = {}".format(arg[0], arg[2], div(arg[0], arg[2])))
+            print("{} / {} = {:d}".format(arg[0], arg[2], div(arg[0], arg[2])))
             exit(0)
         else:
             print("Unknown operator. Available operators: +, -, * and /")
