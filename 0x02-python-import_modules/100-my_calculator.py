@@ -8,17 +8,21 @@ def operation(*args):
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
     else:
-        if args[1] == "+":
-            print("{} + {} = {}".format(arg[0], arg[2], add(arg[0], arg[2])))
+        a = args[0]
+        b = args[2]
+        s = args[1]
+        #s is the operator
+        if s == "+":
+            print(f"{a} + {b} = {add(int(a), int(b))}")
             exit(0)
-        elif args[1] == "-":
-            print("{} - {} = {}".format(arg[0], arg[2], sub(arg[0], arg[2])))
+        elif s == "-":
+            print(f"{a} - {b} = {sub(int(a), int(b))}")
             exit(0)
-        elif args[1] == "*":
-            print("{} * {} = {}".format(arg[0], arg[2], mul(arg[0], arg[2])))
+        elif s == "*":
+            print(f"{a} * {b} = {mul(int(a), int(b))}")
             exit(0)
-        elif args[1] == "/":
-            print("{} / {} = {:d}".format(arg[0], arg[2], div(arg[0], arg[2])))
+        elif s == "/":
+            print(f"{a} / {b} = {div(int(a), int(b))}")
             exit(0)
         else:
             print("Unknown operator. Available operators: +, -, * and /")
