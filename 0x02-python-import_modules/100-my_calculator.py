@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from sys import argv, exit
+import sys
 from calculator_1 import add, mul, div, sub
 
 
@@ -26,4 +26,4 @@ def operation(*args):
 
 
 if __name__ == "__main__":
-    operation(*argv[1:])
+    operation(*sys.argv[1:])
