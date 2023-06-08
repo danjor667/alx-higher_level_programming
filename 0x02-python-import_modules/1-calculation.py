@@ -5,5 +5,5 @@ if __name__ == "__main__":
     b = 5
     print("{a} + {b} = {ans}".format(a=a, b=b, ans=add(a, b)))
     print("{a} - {b} = {ans}".format(a=a, b=b, ans=sub(a, b)))
-    print("{a} * {b} = {ans}".format(a=a, b=b, ans= mul(a, b)))
+    print("{a} * {b} = {ans}".format(a=a, b=b, ans=mul(a, b)))
     print("{a} / {b} = {ans}".format(a=a, b=b, ans=div(a, b)))
