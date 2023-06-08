@@ -11,7 +11,6 @@ def operation(*args):
         a = args[0]
         b = args[2]
         s = args[1]
-        #s is the operator
         if s == "+":
             print(f"{a} + {b} = {add(int(a), int(b))}")
             exit(0)
