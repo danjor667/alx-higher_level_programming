@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-import print_upper
+from module import fast_print
+fast_print()
