@@ -2,5 +2,4 @@
 
 
 def multiply_list_map(my_list=[], number=0):
-    mylist = [map(lambda x: x * number, my_list )]
-    return mylist
+     return [map(lambda x: x * number, my_list )]
