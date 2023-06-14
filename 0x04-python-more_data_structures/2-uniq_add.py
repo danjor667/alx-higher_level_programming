@@ -7,6 +7,6 @@ def uniq_add(my_list=[]):
     for ele in my_list:
         if ele in seen:
             continue
-        coutnt += ele
+        count += ele
         seen.add(ele)
     return count
