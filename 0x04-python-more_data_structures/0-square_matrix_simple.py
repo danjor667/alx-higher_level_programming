@@ -2,9 +2,10 @@
 
 
 def square_matrix_simple(matrix=[]):
-    n = len(matrix)
-    new_matrix = [[0] * n for i in range(n)]
-    for i in range(n):
-        for j in range(n):
+    row = len(matrix)
+    col = len(matrix[0])
+    new_matrix = [[0] * col for i in range(row)]
+    for i in range(row):
+        for j in range(col):
             new_matrix[i][j] = matrix[i][j] ** 2
     return new_matrix
