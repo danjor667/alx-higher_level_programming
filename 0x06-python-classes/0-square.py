@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-""" a class square """
+""" Class Square """
 
-
+ 
 class Square:
-     """ initilising a class """
+     """ Initilising Class """
     pass
