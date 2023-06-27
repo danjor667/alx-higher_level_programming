@@ -3,7 +3,5 @@
 
 
 class Square:
-     """
-     initilising a class
-     """
+     """ initilising a class """
     pass
