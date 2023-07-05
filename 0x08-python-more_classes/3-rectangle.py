@@ -18,6 +18,10 @@ class Rectangle:
         self.height = height
 
     def __str__(self):
+        """ string representation of a trianglr
+            Return:
+                a tiangle drawn with #
+        """
         ans = ""
         s = "#" * self.width + "\n"
         if self.width == 0 or self.height == 0:
