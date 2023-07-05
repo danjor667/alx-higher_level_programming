@@ -33,7 +33,7 @@ class Rectangle:
         """
         return self._height
 
-    @attribute.setter
+    @height.setter
     def height(self, value):
         """ height setter
             Args:
@@ -45,7 +45,7 @@ class Rectangle:
             raise TypeError("height must be an integer")
         self._height = value
 
-    @attribute.setter
+    @width.setter
     def width(self, value):
         """ width setter
 
