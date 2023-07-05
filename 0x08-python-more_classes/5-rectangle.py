@@ -33,12 +33,6 @@ class Rectangle:
                 ans += s
         return ans
 
-    def __del__(self):
-        """"
-            deleting a rectangle
-        """
-        print("Bye rectangle")
-
     def __repr__(self):
         """representation of a triangle
             Return:
