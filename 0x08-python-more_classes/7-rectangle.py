@@ -27,12 +27,12 @@ class Rectangle:
                 a tiangle drawn with #
         """
         ans = ""
-        s = self.print_symbol * self.width + "\n"
+        s = str(self.print_symbol) * self.width + "\n"
         if self.width == 0 or self.height == 0:
             return ans
         for i in range(self.height):
             if i == self.height - 1:
-                ans += self.print_symbol * self.width
+                ans += str(self.print_symbol) * self.width
             else:
                 ans += s
         return ans
