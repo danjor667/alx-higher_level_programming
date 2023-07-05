@@ -5,8 +5,7 @@ Class Rectangle
 
 
 class Rectangle:
-    def __init__(self):
-        """
-        initiating an instance of the class
-        """
-        pass
+    """
+    initiating an instance of the class
+    """
+    pass
