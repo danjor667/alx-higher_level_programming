@@ -27,7 +27,10 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ans
         for i in range(self.height):
-            ans += s
+            if i == self.height - 1:
+                ans += "#" * self.width
+            else:
+                ans += s
         return ans
 
     @property
