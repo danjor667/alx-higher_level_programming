@@ -8,7 +8,7 @@ class Rectangle:
     """
     intialising an instance
     """
-    def __init__(self, width, height):
+    def __init__(self, width=0, height=0):
         """ init new instances
             Args:
                 width (int) the width of the rectangle
