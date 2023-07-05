@@ -39,7 +39,7 @@ class Rectangle:
                 Rectangle(width, height)
         """
         return (f"Rectangle({self.width}, {self.height})")
-    
+
     def __del__(self):
         """
         deleting an instanc
