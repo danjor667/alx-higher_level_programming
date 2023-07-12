@@ -15,11 +15,11 @@ class MyInt(int):
         """
         equality magic method inverted
         """
-        return (self != other)
+        return (float(sel)f != float(other))
 
     def __ne__(self, other):
         """
         non equality magics method inversted
         """
 
-        return (self == other)
+        return float(self) == float(other)
