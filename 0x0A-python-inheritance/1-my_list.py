@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""a class, List"""
+
+
+"""a class, List
+"""
 
 
 class Mylist(list):
@@ -8,6 +11,6 @@ class Mylist(list):
     """
     def print_sorted(self):
         """
-        method that prints the ele of a list in sorted order
+        method print the ele of a list in sorted orde
         """
-        print(sorted(self)
+        print(sorted(self))
