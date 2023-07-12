@@ -9,4 +9,3 @@ class BaseGeometry:
     a class BaseGeometry
     """
     pass
-
