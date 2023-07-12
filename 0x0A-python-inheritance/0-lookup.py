@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """ func that returns all attr and method of an obj"""
 
 
