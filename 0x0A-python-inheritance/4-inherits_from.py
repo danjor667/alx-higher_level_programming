@@ -1,6 +1,6 @@
 #!/bin/bash/python3
 """
-funct,
+funct, inherits_from
 """
 
 
