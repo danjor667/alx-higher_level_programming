@@ -15,7 +15,7 @@ class MyInt(int):
         """
         equality magic method inverted
         """
-        return (float(sel)f != float(other))
+        return (float(self) != float(other))
 
     def __ne__(self, other):
         """
