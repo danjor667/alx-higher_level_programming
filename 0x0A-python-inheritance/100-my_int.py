@@ -8,8 +8,6 @@ class MyInt(int):
     """
     class MyInt
     """
-    def __init__(self):
-        super().__init__(self)
 
     def __eq__(self, other):
         """
