@@ -5,7 +5,7 @@
 """
 
 
-class Mylist(list):
+class MyList(list):
     """
     class that ingerits from the list class
     """
