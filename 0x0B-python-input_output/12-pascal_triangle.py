@@ -18,6 +18,7 @@ def pascal_triangle(n):
         return []
     if n == 1:
         return result
+
     def getnext(prev):
         new_row = [1]
         a = len(prev)
@@ -28,6 +29,7 @@ def pascal_triangle(n):
             i += 1
         new_row.append(1)
         return new_row
+
     m = 0
     while m <= n - 2:
         result.append(getnext(result[m]))
