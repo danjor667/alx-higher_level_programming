@@ -14,4 +14,4 @@ def read_file(filename=""):
     """
     with open(filename) as f:
         for file_line in f:
-            print(file_line)
+            print(file_line, end="")
