@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 """
-a class Square
+    a class Square
 """
+
 Rectangle = __import__('9-rectangle.py').Rectangle
 
 
 class Square(Rectangle):
     """
-    class Square
+        class Square
     """
     def __init__(self, size):
         """
