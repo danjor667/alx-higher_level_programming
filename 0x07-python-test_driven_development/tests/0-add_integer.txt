@@ -32,3 +32,20 @@ TypeError: a must be an integer
 >>> add_integer(4, b = "str")
 Traceback (most recent call last): 
 TypeError: b must be an integer
+
+test case: when a or b is ommited
+---------------------------------
+>>> add_integer(1):
+99
+>>> add_integer(b = 24)
+Traceback (most recent call last): 
+TypeError: add_integer() missing 1 required positional argument: 'a'
+>>> add_integer()
+Traceback (most recent call last): 
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+test case: when a in infinite
+-----------------------------
+>>> add_integrr(float(inf))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
