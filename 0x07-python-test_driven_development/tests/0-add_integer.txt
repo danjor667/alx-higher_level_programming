@@ -1,0 +1,34 @@
+test for ''add_integer''
+
+Return:
+	sum of two int
+=======================
+test case: when a,b are float or int
+------------------------------------
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(2, b = 3)
+5
+>>> add_integer(2.5, b = 3)
+5
+>>> add_integer(2.5, b = 3.5)
+5
+>>> add_integer(2, b = 3.5)
+5
+
+test case: when a or b is negative
+----------------------------------
+>>> add_integer(-1, b = 3)
+2
+>>> add_integer(-1, b = -3)
+-4
+>>> add_integer(1, b = -3)
+-2
+
+test case: when a or b are not float or int
+-------------------------------------------
+>>> add_integer("str", b = 3)
+Traceback (most recent call last): 
+TypeError: a must be an integer
+>>> add_integer(4, b = "str")
+Traceback (most recent call last): 
+TypeError: b must be an integer
