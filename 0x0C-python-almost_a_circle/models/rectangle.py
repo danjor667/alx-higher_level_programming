@@ -109,7 +109,7 @@ class Rectangle(Base):
         displaying a string repr of the rectangle
         """
         for i in range(self.__y):
-            print("/n")
+            print("")
         x = " " * self.__x
         s = x + "#" * self.__width
         for i in range(self.__height):
@@ -137,5 +137,10 @@ class Rectangle(Base):
         get a dict repr of a rectangle
         """
         a = self.__dict__
-        my_dict = {key[12:]: value for key, value in a}
+        my_dict = {}
+        for key, value in a.items():
+            if len(key) > 2:
+                my_dict[key[12:]] = value
+            else:
+                my_dict[key] = value
         return my_dict
