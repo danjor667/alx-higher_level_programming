@@ -34,8 +34,8 @@ class Square(Rectangle):
         """
         property setter
         """
-        self.__width = size
-        self.__height = size
+        self.width = size
+        self.height = size
 
     def update(self, *args, **kwargs):
         """
