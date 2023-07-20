@@ -24,41 +24,41 @@ class Rectangle(Base):
         """
         string representation of instance (obj)
         """
-        return (f"[{Rectangle}] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return (f"[{Rectangle}] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")
 
     @property
     def width(self):
-    """
-    property getter
-    """
+        """
+        property getter
+        """
         return self.__width
 
     @property
     def height(self):
-    """
-    property getter
-    """
+        """
+        property getter
+        """
         return self.__height
 
     @property
     def x(self):
-    """
-    property getter
-    """
+        """
+        property getter
+        """
         return self.__x
 
     @property
     def y(self):
-    """
-    property getter
-    """
+        """
+        property getter
+        """
         return self.__y
 
     @width.setter
     def width(self, width):
-    """
-    property setter
-    """
+        """
+        property setter
+        """
         if width:
             if type(width) != int:
                 raise TypeError("width must be an integer")
@@ -70,9 +70,9 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, height):
-    """
-    property;setter
-    """
+        """
+        property;setter
+        """
         if height:
             if type(height) != int:
                 raise TypeError("height must be an integer")

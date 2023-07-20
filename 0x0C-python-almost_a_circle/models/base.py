@@ -54,7 +54,7 @@ class Base():
         with open(f"{file_name}.json", "w") as f:
             f.write(data)
 
-    @statictmethod
+    @staticmethod
     def from_json_string(json_string):
         """
         retrives an obj from its json str repr
