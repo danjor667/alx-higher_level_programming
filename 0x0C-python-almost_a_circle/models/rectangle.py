@@ -14,10 +14,10 @@ class Rectangle(Base):
         """
         initialising instance
         """
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     def __str__(self):
@@ -59,56 +59,44 @@ class Rectangle(Base):
         """
         property setter
         """
-        if width:
-            if type(width) != int:
-                raise TypeError("width must be an integer")
-            if width <= 0:
-                raise ValueError("width must be >  0")
-            self.__withd == width
-        else:
-            raise TypeError("missing 1 required positional argument: width")
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        elif width <= 0:
+            raise ValueError("width must be >  0")
+        self.__width = width
 
     @height.setter
     def height(self, height):
         """
         property;setter
         """
-        if height:
-            if type(height) != int:
-                raise TypeError("height must be an integer")
-            if height <= 0:
-                raise ValueError("height must be > 0")
-            self.__height = height
-        else:
-            raise TypeError("missing 1 required positional argument: height")
+        if not isinstance(height, int):
+            raise TypeError("height must be an integer")
+        elif height <= 0:
+            raise ValueError("height must be > 0")
+        self.__height = height
 
     @x.setter
     def set_x(self, x):
         """
         property setter
         """
-        if x:
-            if type(x) != int:
-                raise TypeError("x must be an integer")
-            if x < 0:
-                raise ValueError("x must be >= 0")
-            self.__x = x
-        else:
-            raise ValueError("missing 1 required positional argument: x")
+        if type(x) != int:
+            raise TypeError("x must be an integer")
+        if x < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = x
 
     @y.setter
     def set_y(self, y):
         """
         property setter
         """
-        if y:
-            if type(y):
-                raise TypeError("y must be an integer")
-            if y < 0:
-                raise ValueError("y must be >= 0")
-            self.__y = y
-        else:
-            raise ValueError("missing 1 required positional argument: y")
+        if type(y) != int:
+            raise TypeError("y must be an integer")
+        if y < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = y
 
     def area(self):
         """
