@@ -20,9 +20,9 @@ class Base():
         if id is not None:
             self.id = id
         else:
-           self.__class__.__nb_objects += 1
-           self.id = self.__class__.__nb_objects
-    
+            self.__class__.__nb_objects += 1
+            self.id = self.__class__.__nb_objects
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """
@@ -47,7 +47,7 @@ class Base():
         my_list = []
         if list_objs is None or list_objs == []:
             my_list = []
-        else:    
+        else:
             for ele in list_objs:
                 my_list.append(ele.to_dictionary())
         data = cls.to_json_string(my_list)
@@ -75,11 +75,10 @@ class Base():
         """
         name = cls.__name__
         if name == "Rectangle":
-            rectangle = cls(5,10)
+            rectangle = cls(5, 10)
             rectangle.update(**dictionary)
             return rectangle
         else:
             square = cls(2)
             square.update(**dictionary)
             return square
-

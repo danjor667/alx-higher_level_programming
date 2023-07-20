@@ -24,7 +24,8 @@ class Rectangle(Base):
         """
         string representation of instance (obj)
         """
-        return (f"[{self.__class__.__name__}] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")
+        return (f"[{self.__class__.__name__}] ({self.id})\
+                {self.__x}/{self.__y} - {self.__width}/{self.__height}")
 
     @property
     def width(self):
