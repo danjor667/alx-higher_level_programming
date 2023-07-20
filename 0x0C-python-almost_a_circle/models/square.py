@@ -59,5 +59,10 @@ class Square(Rectangle):
         return a dict repr of a square
         """
         a = self.__dict__
-        my_dict = {key[9:]: value for key, value in a}
+        my_dict = {}
+        for key, value in a.items():
+            if len(key) > 2:
+                my_dict[key[12:]] = value
+            else:
+                my_dict[key] = value
         return my_dict
