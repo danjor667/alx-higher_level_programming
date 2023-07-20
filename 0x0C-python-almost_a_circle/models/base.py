@@ -20,8 +20,8 @@ class Base():
         if id is not None:
             self.id = id
         else:
-            __nb_objects += 1
-            self.id = __nb_objects
+           self.__class__.__nb_objects += 1
+           self.id = self.__class__.__nb_objects
     
     @staticmethod
     def to_json_string(list_dictionaries):
