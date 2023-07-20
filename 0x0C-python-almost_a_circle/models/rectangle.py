@@ -14,10 +14,10 @@ class Rectangle(Base):
         """
         initialising instance
         """
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     def __str__(self):
@@ -77,7 +77,7 @@ class Rectangle(Base):
         self.__height = height
 
     @x.setter
-    def set_x(self, x):
+    def x(self, x):
         """
         property setter
         """
@@ -88,7 +88,7 @@ class Rectangle(Base):
         self.__x = x
 
     @y.setter
-    def set_y(self, y):
+    def y(self, y):
         """
         property setter
         """
