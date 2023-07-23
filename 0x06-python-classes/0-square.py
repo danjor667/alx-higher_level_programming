@@ -1,7 +1,11 @@
 #!/usr/bin/python3
-"""Class Square"""
+"""
+defineing a class Square
+"""
 
 
-class Square:
-    """Initilising Class"""
+class Square():
+    """
+    class Square
+    """
     pass
