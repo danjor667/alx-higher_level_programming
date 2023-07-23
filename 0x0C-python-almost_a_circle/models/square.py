@@ -63,7 +63,10 @@ class Square(Rectangle):
         my_dict = {}
         for key, value in a.items():
             if len(key) > 2:
-                my_dict[key[12:]] = value
+                key = key[12:]
+                if key in ["width", "height"]:
+                    key = "size"
+                my_dict[key] = value
             else:
                 my_dict[key] = value
         return my_dict
