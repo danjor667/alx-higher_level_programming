@@ -93,9 +93,9 @@ class Base():
         name = cls.__name__
         try:
             with open("name.json") as f:
-                mylist = from_json_string(f.read())
+                mylist = cls.from_json_string(f.read())
                 for ele in mylist:
-                    instancelist.append(create(cls, **ele))
+                    instancelist.append(cls.create(**ele))
                 return instancelist
         except Exception:
             return []
