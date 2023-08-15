@@ -92,7 +92,7 @@ class Base():
         instancelist = []
         name = cls.__name__
         try:
-            with open("name.json") as f:
+            with open(f"{name}.json") as f:
                 mylist = cls.from_json_string(f.read())
                 for ele in mylist:
                     instancelist.append(cls.create(**ele))
