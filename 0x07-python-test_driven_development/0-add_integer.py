@@ -1,21 +1,15 @@
 #!/usr/bin/python3
 """
-function that return the int
-sum of 2 numbers
+my module
 """
 
 
 def add_integer(a, b=98):
     """
-    adds two values, int or float
-    return an int
-    Args:
-        a, b: int or float
-    Returns:
-        int
+    adding two numbers
     """
-    if type(a) != float and type(a) != int:
+    if type(a) != int and type(a) != float:
         raise TypeError("a must be an integer")
-    if type(b) != float and type(b) != int:
+    if type(b) != int and type(b) != float:
         raise TypeError("b must be an integer")
     return int(a) + int(b)

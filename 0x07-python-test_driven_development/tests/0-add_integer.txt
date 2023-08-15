@@ -1,8 +1,6 @@
-test for ''add_integer''
+testing the addition module, 0-add_integer
+=========================================
 
-Return:
-	sum of two int
-=======================
 test case: when a,b are float or int
 ------------------------------------
 >>> add_integer = __import__('0-add_integer').add_integer
@@ -35,7 +33,7 @@ TypeError: b must be an integer
 
 test case: when a or b is ommited
 ---------------------------------
->>> add_integer(1):
+>>> add_integer(1)
 99
 >>> add_integer(b = 24)
 Traceback (most recent call last): 
@@ -46,6 +44,12 @@ TypeError: add_integer() missing 1 required positional argument: 'a'
 
 test case: when a in infinite
 -----------------------------
->>> add_integrr(float(inf))
+>>> add_integer(float('inf'))
 Traceback (most recent call last):
 OverflowError: cannot convert float infinity to integer
+
+test case: when NaN is passed
+-----------------------------
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
