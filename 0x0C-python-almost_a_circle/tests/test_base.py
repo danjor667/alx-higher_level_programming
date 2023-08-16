@@ -4,6 +4,7 @@ Tests for base class
 """
 import unittest
 from models.base import Base
+import json
 
 
 class BaseClassTest(unittest.TestCase):
@@ -41,6 +42,20 @@ class BaseClassTest(unittest.TestCase):
         """
         b1 = Base(None)
         self.assertEqual(b1.id, 1)
+
+
+class Test_methods(unittest.TestCase):
+    """
+    testing the to_json_string method
+    """
+    def test_to_json_string(self):
+        """
+        doc
+        """
+        b = Base()
+        self.assertEqual(b.to_json_string(None), ("[]"))
+        self.assertEqual(b.to_json_string([]), ("[]"))
+        self.assertEqual((b.to_json_string([{'id': 24}])), json.dumps([{"id": 24}]))
 
 
 if __name__ == "__main__":
