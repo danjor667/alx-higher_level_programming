@@ -6,6 +6,8 @@ testing rectangle
 import unittest
 import json
 from models.rectangle import Rectangle
+from io import StringIO
+import sys
 #from models.square import Square
 
 class TestRectangle(unittest.TestCase):
@@ -127,4 +129,37 @@ class TestRectangle(unittest.TestCase):
         Rectangle.save_to_file([r])
         my_list = Rectangle.load_from_file()
         self.assertEqual(type(my_list[0]), type(Rectangle.create(**r.to_dictionary())))
+
+    def test_display(self):
+        """
+        doc
+        """
+        # testing display with x,y = (0,0)
+        r = Rectangle(2,3)
+        r1 = Rectangle(2,3,2)
+        r2 = Rectangle(2,3,2,2)
+        inst = StringIO()
+        sys.stdout = inst
+        r.display()
+        to_check = inst.getvalue().strip()
+        sys.stdout = sys.__stdout__
+        expected = "##\n##\n##"
+        self.assertEqual(to_check, expected)
+        #testing display with cordinates (2, 0)
+        inst2 = StringIO()
+        sys.stdout = inst2
+        r1.display()
+        to_check = inst2.getvalue().strip()
+        sys.stdout = sys.__stdout__
+        expected = "##\n  ##\n  ##"
+        self.assertEqual(to_check, expected)
+        # testing display with cordinates (2,2)
+        sys.stdout = inst
+        r2.display()
+        to_check = inst.getvalue().strip()
+        sys.stdout = sys.__stdout__
+        expected = "##\n##\n##\n\n\n  ##\n  ##\n  ##"
+        self.assertEqual(to_check, expected)
+
+        
 
