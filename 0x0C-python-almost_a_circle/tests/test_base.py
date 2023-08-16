@@ -57,6 +57,17 @@ class Test_methods(unittest.TestCase):
         self.assertEqual(b.to_json_string([]), ("[]"))
         self.assertEqual((b.to_json_string([{'id': 24}])), json.dumps([{"id": 24}]))
 
+    def test_from_json_string(self):
+        """
+        doc
+        """
+        b = Base()
+        self.assertEqual(b.from_json_string(None), [])
+        a = ""
+        self.assertEqual(b.from_json_string(a), [])
+        c = json.loads('[{"id": 24}]')
+        self.assertEqual(b.from_json_string('[{"id": 24}]'), c)
+
 
 if __name__ == "__main__":
     unittest.main()
