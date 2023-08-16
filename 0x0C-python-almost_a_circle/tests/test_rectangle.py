@@ -111,12 +111,13 @@ class TestRectangle(unittest.TestCase):
             content = f.read()
             self.assertEqual(content, '[{"width": 1, "height": 2, "x": 0, "y": 0, "id": 23}]')
 
-    #def test_load_from_file(self):
-    #    """
-    #    doc
-    #    """
-    #    my_list = Rectangle.load_from_file()
-    #    self.assertEqual(my_list, [])
+    def test_load_from_file(self):
+        """
+        doc
+        """
+        Rectangle.save_to_file([])
+        my_list = Rectangle.load_from_file()
+        self.assertEqual(my_list, [])
 
     def test_load_from_file2(self):
         """
