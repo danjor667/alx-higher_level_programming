@@ -6,6 +6,7 @@ testing rectangle
 import unittest
 import json
 from models.rectangle import Rectangle
+#from models.square import Square
 
 class TestRectangle(unittest.TestCase):
     """
@@ -75,3 +76,54 @@ class TestRectangle(unittest.TestCase):
         """
         r = Rectangle(1, 2, id=12)
         self.assertEqual(r.to_dictionary(), {"id": 12, "x": 0, "y": 0, "width": 1, "height": 2})
+
+
+    def test_create(self):
+        """
+        doc
+        """
+        r = Rectangle.create(**{"id": 23})
+        self.assertEqual(r.id, 23)
+        r = Rectangle.create(**{"id": 23, "width": 2})
+        self.assertEqual(r.width, 2)
+        r = Rectangle.create(**{"id": 23, "width": 2, "height": 3})
+        self.assertEqual(r.height, 3)
+        r = Rectangle.create(**{"id":23, "width": 2, "height": 3, "x": 2})
+        self.assertEqual(r.x, 2)
+        r = Rectangle.create(**{"id":23, "width": 2, "height": 3, "x": 2, "y": 4})
+        self.assertEqual(r.y, 4)
+
+    def test_save_to_file(self):
+        """
+        doc
+        """
+        r = Rectangle(1,2, id=23)
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json") as f:
+            cont = f.read()
+            self.assertEqual(cont, '[]')
+        Rectangle.save_to_file([])
+        with open("Rectangle.json")as f:
+            content = f.read()
+            self.assertEqual(content, '[]')
+        Rectangle.save_to_file([r])
+        with open("Rectangle.json", "r") as f:
+            content = f.read()
+            self.assertEqual(content, '[{"width": 1, "height": 2, "x": 0, "y": 0, "id": 23}]')
+
+    #def test_load_from_file(self):
+    #    """
+    #    doc
+    #    """
+    #    my_list = Rectangle.load_from_file()
+    #    self.assertEqual(my_list, [])
+
+    def test_load_from_file2(self):
+        """
+        doc
+        """
+        r = Rectangle(1, 2)
+        Rectangle.save_to_file([r])
+        my_list = Rectangle.load_from_file()
+        self.assertEqual(type(my_list[0]), type(Rectangle.create(**r.to_dictionary())))
+
