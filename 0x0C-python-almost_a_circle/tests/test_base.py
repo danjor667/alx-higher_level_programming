@@ -34,7 +34,7 @@ class BaseClassTest(unittest.TestCase):
         is id set to value
         """
         b1 = Base(10)
-        self.assertEqual(b1.id, Base(10).id)
+        self.assertEqual(b1.id, 10)
 
     def test_id_None(self):
         """
