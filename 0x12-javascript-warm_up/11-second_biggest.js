@@ -1,8 +1,8 @@
 #!/usr/bin/node
 
 const arg = process.argv;
-let max = arg[0];
-let secondMax = arg[1];
+let max = 0;
+let secondMax = 0;
 if (arg.length === 3 || arg.length === 2) {
   console.log(secondMax);
 } else {
