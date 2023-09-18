@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+select only STATE from states
+"""
 
 import sys
 import MySQLdb

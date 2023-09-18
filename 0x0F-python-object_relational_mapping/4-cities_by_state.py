@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+selsct all from cities and city states
+"""
 
 import sys
 import MySQLdb

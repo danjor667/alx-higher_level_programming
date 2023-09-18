@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+select only STATE from states, SQL injection free
+"""
 
 import sys
 import MySQLdb
