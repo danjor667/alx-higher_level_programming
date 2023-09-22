@@ -1,14 +1,12 @@
 #!/usr/bin/python3
 """
-printing the first state in the databases
-hbtn_0e_6_usa
+doc
 """
-import sqlalchemy
-from sqlalchemy.ext.declarative import declarative_base
-import sys
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import create_engine
+import sys
 
 if __name__ == "__main__":
     url = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
@@ -19,6 +17,7 @@ if __name__ == "__main__":
     engine = create_engine(url)
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.query(State).order_by(State.id).first()
-    if state:
-        print(f"{state.id}: {state.name}")
+    res = session.query(State).order_by(State.id).all()
+    for state in res:
+        if 'a' in state.name:
+            print(f"{state.id}: {state.name}")
