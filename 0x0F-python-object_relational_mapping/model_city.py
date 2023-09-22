@@ -3,7 +3,7 @@
 doc
 """
 
-from sqlalchemy import Column, String, Integer ForeignKey
+from sqlalchemy import Column, String, Integer, ForeignKey
 from sqlalchemy.ext.declarative import declative_base
 from model_state import Base
 
