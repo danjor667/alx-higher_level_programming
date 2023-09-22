@@ -19,5 +19,5 @@ if __name__ == "__main__":
     session = Session()
     cities = session.query(City).order_by(City.id).all()
     for city in cities:
-        state = session.query(State).filter(City.state_id == State.id).first()
+        state = session.query(State).filter(city.state_id == State.id).first()
         print(f"{state.name}: ({city.id}) {city.name}")
